@@ -31,7 +31,7 @@ infogain <- function(igvectd, igattriba)
     {
         (vectdlist[[iter]] <- igvectd[igattriba == levs[iter]])
     }
-# is there a better/vectorized way to assign numeachitem?
+# is there a better/vectorized way to assign vectdlist[[]]?
     Esub <- sapply(vectdlist, entropy)
     sumEsubs <- sum((sapply(vectdlist, length) / length(fvecta)) * Esub)
     (igain <- Esystem - sumEsubs)
